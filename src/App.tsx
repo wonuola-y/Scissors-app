@@ -1,27 +1,23 @@
-import Nav from './components/Nav';
-import Hero from './components/Heo';
-import Info from './components/Info';
-import Pricing from './components/Pricing';
-import Faq from './components/Faq';
-import { Form } from './components/Form';
-import Starting from './components/Starting';
-import Footer from './components/Footer-section';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Home } from "./components/Home";
+import Login from "./components/Login";
+import { initializeApp } from "firebase/app";
+import { AuthRoute } from "./components/context/AuthContext";
+import { config } from "./config/firebase";
 
+initializeApp(config.firebaseConfig);
 
-
-function App() {
+export interface IAppProps {}
+export const App: React.FunctionComponent<IAppProps> = (props) => {
   return (
-    <div className="App">
-      <Nav />
-      <Hero />
-      <Info />
-      <Pricing />
-      <Form />
-      <Faq />
-      <Starting />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+    <AuthRoute>
+<Route path="/" element={<Home />}/>
+    </AuthRoute>
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
-
-export default App;
+};

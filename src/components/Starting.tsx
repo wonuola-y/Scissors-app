@@ -2,7 +2,9 @@
 
 const Starting = () => {
   return (
-    <div>Starting</div>
+    <div>
+Starting
+    </div>
   )
 }
 

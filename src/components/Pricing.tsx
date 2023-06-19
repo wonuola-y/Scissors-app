@@ -52,11 +52,13 @@ const Pricing = () => {
         <div className="flex w-full border-2 border-sopd border-amber-300 my-20 justify-center ">
           {Prices.map((price) => (
             <div
-              className=" border-2 border-sopd border-blue-300 
+              className=" border-[1px] border-solid
+       border-blue-300 
        py-8 px-4
        rounded-lg
        flex flex-col justify-start
-       hover:scale-125 hover:bg-slate-800 hover:text-white hover:text-sm
+       hover:scale-125 hover:bg-slate-800 hover:text-white hover:text-sm hover:border-none hover:transition-all
+       hover: duration-[1s]
        text-sm
        "
               key={price.id}
@@ -96,7 +98,7 @@ const Pricing = () => {
           ))}
         </div>
         <div>
-          <button></button>
+          <button className="rounded-3xl bg-blue-600 px-6 py-3 text-white">Select Pricing</button>
         </div>
       </div>
     </div>

@@ -68,7 +68,7 @@ const Info = () => {
             <li>
               <b className="text-3xl">{item.title}</b>
               <br />
-              <small className=" max-w-xs text-base ">{item.sub}</small>
+              <small className="text-base max-w-[60px] ">{item.sub}</small>
             </li>
           </ul>
         ))}
