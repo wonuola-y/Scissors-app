@@ -13,9 +13,15 @@ export const App: React.FunctionComponent<IAppProps> = (props) => {
   return (
     <BrowserRouter>
       <Routes>
-    <AuthRoute>
-<Route path="/" element={<Home />}/>
-    </AuthRoute>
+        <Route
+          path="/"
+          element={
+            <AuthRoute>
+              <Home />
+            </AuthRoute>
+          }
+        />
+
         <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>

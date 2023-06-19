@@ -8,8 +8,6 @@ import Faq from './Faq';
 import { Form } from './Form';
 import Starting from './Starting';
 import Footer from './Footer-section';
-import Signup from './Signup';
-
  interface IHomeProps{}
 
 export const Home: React.FC<IHomeProps> = (props) => {

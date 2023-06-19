@@ -3,12 +3,12 @@
 
 export const config = {
     firebaseConfig: {
-        apiKey: "process.env.FIREBASE-API-KEY",
-        authDomain: "process.env.FIREBASE-AUTH-DOMAIN",
+        apiKey: 'AIzaSyCRqHyb1izlL2c2u0AQ6OAIkiV4n3WMUic',
+        authDomain: 'scissors_app_9a743.firebaseapp.com',
         // link the env.local variables to these ones below
-        projectId: "process.env.FIREBASE-PROJECT-ID",
-        storageBucket: "process.env.FIREBASE-STORAGEBUCKET",
-        messagingSenderId: "process.env.FIREBASE-messagingSenderId",
-        appId: "process.env.FIREBASE-APPID"
+        projectId:'scissors_app_9a743',
+        storageBucket: 'scissors_app_9a743.appspot.com',
+        messagingSenderId:'514102869957',
+        appId: '1:514102869957:web:f40c67c80fac38a65895ac',
     }
 }
