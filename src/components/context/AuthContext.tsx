@@ -10,14 +10,16 @@ export const AuthRoute: React.FunctionComponent<IAuthRouteProps> = (props) => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {}, [auth]);
+  useEffect(() => {
+    AuthCheck();
+  }, [auth]);
 
   const AuthCheck = onAuthStateChanged(auth, (user) => {
     if (user) {
       setLoading(false);
     } else {
       console.log("cant move on");
-      navigate("/login");
+      navigate("/");
     }
   });
 
