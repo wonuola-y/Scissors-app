@@ -5,9 +5,10 @@ import Hero from './Heo';
 import Info from './Info';
 import Pricing from './Pricing';
 import Faq from './Faq';
-import { Form } from './Form';
 import Starting from './Starting';
 import Footer from './Footer-section';
+import { FormHolder } from './FormHolder';
+
  interface IHomeProps{}
 
 export const Home: React.FC<IHomeProps> = (props) => {
@@ -18,7 +19,7 @@ export const Home: React.FC<IHomeProps> = (props) => {
         <Hero />
         <Info />
         <Pricing />
-        <Form />
+      <FormHolder />
         <Faq />
         <Starting />
         <Footer/>     

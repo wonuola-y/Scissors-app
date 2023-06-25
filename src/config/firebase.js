@@ -1,14 +1,37 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import {
+  getAuth,
+  signInWithRedirect,
+  GoogleAuthProvider,
+  onAuthStateChanged,
+  getRedirectResult,
+} from "firebase/auth";
 
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCyUzU6CLawfKO4g8NZMqPi3ttXk5yu9Gg",
+  authDomain: "scissors-609e3.firebaseapp.com",
+  projectId: "scissors-609e3",
+  storageBucket: "scissors-609e3.appspot.com",
+  messagingSenderId: "727275790453",
+  appId: "1:727275790453:web:a6ef8cc5dd5bf71384583c",
+};
 
-export const config = {
-    firebaseConfig: {
-        apiKey: 'AIzaSyCRqHyb1izlL2c2u0AQ6OAIkiV4n3WMUic',
-        authDomain: 'scissors_app_9a743.firebaseapp.com',
-        // link the env.local variables to these ones below
-        projectId:'scissors_app_9a743',
-        storageBucket: 'scissors_app_9a743.appspot.com',
-        messagingSenderId:'514102869957',
-        appId: '1:514102869957:web:f40c67c80fac38a65895ac',
-    }
-}
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// set up auth provider
+const provider = new GoogleAuthProvider();
+const auth = getAuth();
+export {
+  app,
+  provider,
+  auth,
+  signInWithRedirect,
+  getRedirectResult,
+  onAuthStateChanged,
+};
