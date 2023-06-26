@@ -4,9 +4,15 @@ import {
   getRedirectResult,
   auth,
   provider,
+  onAuthStateChanged,
 } from "../config/firebase";
+import { node, string } from "prop-types";
+import { Form } from "./Form";
+
 const Login = () => {
   const [logIn, setLogIn] = useState(false);
+  const [User, setUser] = useState<any>(null)
+
   function signIn(event: any) {
     event.preventDefault();
     console.log("logging in ....");
@@ -29,9 +35,23 @@ const Login = () => {
   }, []);
 
   //Check auth state
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        //  setLogIn(true)
+        const {  displayName, email, photoURL, uid} = user
+        setUser({ displayName, email, photoURL, uid})
+        console.log(user);
+      } else {
+        // User is signed out
+        setUser(null)
+      }
+    });
+  }, []);
 
   return (
-    <div>
+    <>
+    {User ? <Form /> : <div>
       Login
       <div>
         <h3>Log in with:</h3>
@@ -49,7 +69,9 @@ const Login = () => {
           or
           <p></p>
         </div>
-        <div style={logIn ? {} : { display: "none" }}>Login successful</div>
+        <div style={logIn ? {} : { display: "none" + node }}>
+          Login successful
+        </div>
         <form action="">
           <input type="email" name="" id="" />
           <input type="password" name="" id="" />
@@ -67,7 +89,8 @@ const Login = () => {
           </p>
         </form>
       </div>
-    </div>
+    </div> }
+    </>
   );
 };
 

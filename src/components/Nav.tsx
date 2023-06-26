@@ -26,7 +26,7 @@ const NavList = [
 ];
 const Nav = () => {
   return (
-    <div className="flex justify-around w-full border-2 border-solid border-red-600 ">
+    <div className="flex justify-around w-full m-4">
       <div>
         <img src={logo} alt="logo" />
       </div>

@@ -6,12 +6,12 @@ const Hero = () => {
   return (
     <div>
       <div className="flex flex-col text-center items-center">
-        <h1 className="border-2 border-solid  font-semibold border-red-500 text-5xl max-w-5xl flex flex-col py-10 ">
+        <h1 className="font-semibold  text-5xl max-w-5xl flex flex-col py-10  pb-5 leading-shrug ">
           <span className="text-center">
             Optimize Your Online Experience with Our{" "}
           </span>
           <br />
-          <span className="flex w-full  border-2 border-solid border-red-600 text-center justify-center ">
+          <span className="flex w-full text-center justify-center my-4 ">
             Advanced{" "}
             <span className="text-blue-600 flex flex-col mx-3">
               URL Shortening <img className=" w-70" src={span} alt="hypen" />
@@ -19,13 +19,14 @@ const Hero = () => {
             Solution
           </span>
         </h1>
-        <p className="max-w-2xl leading-8 py-5">
+        <p className="max-w-2xl leading-8 py-3 pt-0">
           Personalize your shortened URLs to align with your brand identity.
           Utilize custom slugs, branded links, and domain customization options
           to reinforce your brand presence and enhance user engagement.
         </p>
-        <div className="py-5">
-          <button className=" bg-blue-600 rounded-3xl p-2 px-4 text-white mx-5">
+        <div className="my-8">
+          <button className=" bg-blue-600 rounded-3xl p-2
+           px-4 text-white mx-5">
             Sign Up{" "}
           </button>
           <button className="text-blue-600"> Learn more</button>

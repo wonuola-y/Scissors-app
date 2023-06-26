@@ -51,7 +51,7 @@ const Choose = [
 const Info = () => {
   return (
     <div>
-      <div className="py-10 flex w-full border-2 border-solid border-amber-300 items-center justify-around ">
+      <div className="py-10 flex w-full items-center justify-around ">
         <div>
           <h1 className="text-4xl font-bold">
             One Stop.
@@ -63,7 +63,7 @@ const Info = () => {
         {List.map((item) => (
           <ul
             key={item.id}
-            className="flex flex-col  border-2 border-solid border-amber-300 "
+            className="flex flex-col  "
           >
             <li>
               <b className="text-3xl">{item.title}</b>
