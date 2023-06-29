@@ -2,6 +2,7 @@ import span from "../assets/span.svg";
 import HeroImg from "../assets/Hero-img.svg";
 import BgProp from "../assets/bgitem.svg";
 import rect from "../assets/rect.svg";
+import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <div>
@@ -25,10 +26,10 @@ const Hero = () => {
           to reinforce your brand presence and enhance user engagement.
         </p>
         <div className="my-8">
-          <button className=" bg-blue-600 rounded-3xl p-2
+          <Link to='/sign' className=" bg-blue-600 rounded-3xl p-2
            px-4 text-white mx-5">
             Sign Up{" "}
-          </button>
+          </Link>
           <button className="text-blue-600"> Learn more</button>
         </div>
         <div className="flex">
