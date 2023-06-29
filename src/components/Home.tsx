@@ -9,20 +9,24 @@ import Starting from './Starting';
 import Footer from './Footer-section';
 import { FormHolder } from './FormHolder';
 
+
  interface IHomeProps{}
 
 export const Home: React.FC<IHomeProps> = (props) => {
   return (
+    
     <div>
         {/* Header */}
-        <Nav />
+    
+      <Nav />
         <Hero />
         <Info />
         <Pricing />
       <FormHolder />
         <Faq />
         <Starting />
-        <Footer/>     
+        <Footer/>  
+        
     </div>
   )
 }

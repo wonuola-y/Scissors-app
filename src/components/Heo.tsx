@@ -5,16 +5,16 @@ import rect from "../assets/rect.svg";
 const Hero = () => {
   return (
     <div>
-      <div className="flex flex-col text-center items-center">
-        <h1 className="font-semibold  text-5xl max-w-5xl flex flex-col py-10  pb-5 leading-shrug ">
+      <div className="flex flex-col text-center items-center pt-10 md:pt-20">
+        <h1 className="font-semibold  md:text-5xl text-2xl text-center md:max-w-5xl md:flex flex-col md:py-10  pb-5 md:leading-shrug  ">
           <span className="text-center">
             Optimize Your Online Experience with Our{" "}
           </span>
-          <br />
-          <span className="flex w-full text-center justify-center my-4 ">
+          <br className="md:block hidden" />
+          <span className="flex w-full text-center justify-center md:my-4 ">
             Advanced{" "}
             <span className="text-blue-600 flex flex-col mx-3">
-              URL Shortening <img className=" w-70" src={span} alt="hypen" />
+              URL Shortening <img className=" hidden md:flex md:w-70" src={span} alt="hypen" />
             </span>{" "}
             Solution
           </span>

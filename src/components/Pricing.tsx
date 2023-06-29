@@ -57,7 +57,8 @@ const Pricing = () => {
        py-8 px-4
        rounded-lg
        flex flex-col justify-start
-       hover:scale-125 hover:bg-slate-800 hover:text-white hover:text-sm hover:border-none hover:transition-all
+       hover:scale-125
+      hover:bg-slate-800 hover:text-white hover:text-sm hover:border-none hover:transition-all
        hover: duration-[1s]
        text-sm
        "

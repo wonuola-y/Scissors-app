@@ -1,0 +1,31 @@
+@keyframes gradientAnimation {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .gradient-animation {
+    background: #317fc4;
+background: radial-gradient(circle, #205295 0%,#0f57a4 50%, #1b4068de 100%);
+    background-size: 150% auto;
+    animation: gradientAnimation 2s ease-in-out infinite;
+  }
+  .custom-loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: 
+    radial-gradient(farthest-side,#0a018d 95%,#0000) 50% 1px/12px 12px no-repeat,
+    radial-gradient(farthest-side,#0000 calc(100% - 14px),#ffffff 0);
+   
+    animation: s5 1s infinite linear;
+  }
+  
+  @keyframes s5 {
+    100% {transform: rotate(1turn)}
+  }
+  
