@@ -11,7 +11,7 @@ const Signup = () => {
   return (
     <div className="flex justify-center items-center min-h-screen">
       <div
-        className=" w-6/12 flex justify-center items-center
+        className=" w-11/12 flex justify-center items-center
       flex-col"
       >
         <h3 className="my-2">Sign up with:</h3>
@@ -63,7 +63,7 @@ const Signup = () => {
             className="border-2 border-solid border-blue-600 w-8/12 mt-4 py-2 px-2 rounded-lg "
           />
           {/* dont forget to add the eye icont ot your passwowrds */}
-          <small className="text-gray-600 flex justify-start items-start`">
+          <small className="text-gray-600 flex justify-start items-start my-4 w-7/12">
             6 or more characters, one number, one uppercase & one lower case.
           </small>
           <button
