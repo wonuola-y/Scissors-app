@@ -15,7 +15,7 @@ import { FormHolder } from './FormHolder';
 export const Home: React.FC<IHomeProps> = (props) => {
   return (
     
-    <div>
+    <div className=' font-mw'>
         {/* Header */}
     
       <Nav />

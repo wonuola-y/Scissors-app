@@ -41,7 +41,7 @@ const Prices = [
 const Pricing = () => {
   return (
     <div>
-      <div className="py-10 flex flex-col w-full border-2 border-sopd border-amber-300 items-center justify-around ">
+      <div className="py-10 flex flex-col w-full items-center justify-around ">
         <div className="flex flex-col justify-center items-center w-9/12">
           <h2 className="text-4xl font-semibold my-2">A <span className="text-blue-600">price perfect</span> for your needs.</h2>
           <p className="text-center">
@@ -49,7 +49,7 @@ const Pricing = () => {
             can be rest assured we have you in mind in our pricing.
           </p>
         </div>
-        <div className="flex w-full border-2 border-sopd border-amber-300 my-20 justify-center ">
+        <div className="flex flex-col  md:flex-row w-full my-20 justify-center ">
           {Prices.map((price) => (
             <div
               className=" border-[1px] border-solid
@@ -61,6 +61,7 @@ const Pricing = () => {
       hover:bg-slate-800 hover:text-white hover:text-sm hover:border-none hover:transition-all
        hover: duration-[1s]
        text-sm
+       my-5
        "
               key={price.id}
             >
@@ -70,28 +71,28 @@ const Pricing = () => {
              
                 <div className="flex my-2" >
                 <img className="mx-3  hover:text-white" src={price.img} alt="check-icon" /> 
-                <p className="flex">
+                <p className="flex text-sm">
                {price.perkOne} </p>  
               
                 </div>
                <div className="flex my-2">
                <img className="mx-3 hover:text-white" src={price.img} alt="check-icon" /> 
-               <p className="flex ">
+               <p className="flex text-sm">
                    {price.perkTwo}</p> 
                </div>
                  <div className="flex my-2">
                  <img className="mx-3 hover:text-white" src={price.img} alt="check-icon" /> 
-                 <p className="flex  ">
+                 <p className="flex text-sm ">
                   {price.perkThree}</p> 
                  </div>
                 <div className=" flex my-2">
                 <img className="mx-3 hover:text-white" src={price.img} alt="check-icon" /> 
-                <p className="flex">
+                <p className="flex text-sm">
                   {price.perkFive}</p>  
                 </div>
                 <div className="flex my-2">
                 <img className="mx-3 hover:text-white" src={price.img} alt="check-icon" /> 
-                <p className="flex">
+                <p className="flex text-sm">
                   {price.perkSix}</p>  
                 </div>
            

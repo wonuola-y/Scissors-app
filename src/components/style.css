@@ -2,17 +2,20 @@
     0%,
     100% {
       background-position: 0% 50%;
+      /* transform: scale(1, 1); */
     }
     50% {
+        /* transform: scale(1.5, 1.5); */
       background-position: 100% 50%;
     }
   }
   
   .gradient-animation {
-    background: #317fc4;
-background: radial-gradient(circle, #205295 0%,#0f57a4 50%, #1b4068de 100%);
-    background-size: 150% auto;
-    animation: gradientAnimation 2s ease-in-out infinite;
+    background: #368bd6;
+    background: linear-gradient(315deg, rgb(79, 0, 101) 3%, rgba(60,132,206,1) 38%, rgb(162, 48, 238) 68%, rgb(2, 6, 83) 98%);
+
+    background-size: 400% auto;
+    animation: gradientAnimation 5s ease-in-out infinite;
   }
   .custom-loader {
     width: 50px;
@@ -29,3 +32,8 @@ background: radial-gradient(circle, #205295 0%,#0f57a4 50%, #1b4068de 100%);
     100% {transform: rotate(1turn)}
   }
   
+  
+@media screen and (min-width :800px){
+  
+
+}

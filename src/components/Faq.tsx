@@ -8,17 +8,17 @@ interface fq {
 const FAQ: fq[] = [
   {
     id: 1,
-    question: "How does URL shortening work?",
+    question: "How does URL shortening work ?",
     answer: " URL shortening works by taking a long URL and creating a shorter, condensed version that redirects to the original URL. When a user clicks on the shortened link, they are redirected to the intended destination.",
   },
   {
     id: 2,
-    question: "Is it necessary to create an account to use the URL shortening service?",
+    question: "Is it necessary to create an account to use the URL shortening service ?",
     answer: " Yes it is.",
   },
   {
     id: 3,
-    question: "Are the shortened links permanent? Will they expire?",
+    question: "Are the shortened links permanent ? Will they expire ?",
     answer: " No, they don't expre.",
   },
   {
@@ -28,12 +28,12 @@ const FAQ: fq[] = [
   },
   {
     id: 5,
-    question: "What is a QR code ",
+    question: "What is a QR code ?",
     answer: " According to bit.ly, 'Quick response or QR, is a type of barcode that can store a multitude of information. The obvious difference between a QR Code and Barcode is its appearance. A QR Code is always in the shape of a square and contains smaller, even blocks similar to Tetris. A Barcode, on the other hand, has vertical bars in different thicknesses and is often accompanied by a serial number.'",
   },
   {
     id: 6,
-    question: "Is there an API available for integrating the URL shortening service into my own applications or websites?",
+    question: "Is there an API available for integrating  URL shortening into my own applications or websites ?",
     answer: " Not availble yet.",
   }
   
@@ -59,7 +59,12 @@ const toggle = (index: number) => {
         </h1>
         <b className={` cursor-pointer ${active === id ? active : ''}`}>+</b>
   </div>
-        {active === id && <p className="border-2 text-sm py-5 border-solid border-red-600 ">{i.answer}</p> }
+        {active === id && <p className="text-sm p-5 
+        bg-blue-400 bg-clip-padding
+           backdrop-filter
+           backdrop-blur-lg
+           rounded-lg
+           bg-opacity-10 ">{i.answer}</p> }
         <hr />
   </div>
 ))}

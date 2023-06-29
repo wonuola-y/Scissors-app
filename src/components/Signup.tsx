@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
 
@@ -8,9 +9,9 @@ const Signup = () => {
     const PasswordConfirmRef = useRef( null)
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center items-center min-h-screen">
       <div
-        className="border-2 border-solid border-blue-400 w-6/12 flex justify-center items-center
+        className=" w-6/12 flex justify-center items-center
       flex-col"
       >
         <h3 className="my-2">Sign up with:</h3>
@@ -74,13 +75,13 @@ const Signup = () => {
           <p className="text-gray-600">
             Already have an account?{" "}
             <span>
-              <a href="Signup.tsx" className="text-blue-600">
+              <Link to="/login" className="text-blue-600">
                 Log in
-              </a>
+              </Link>
             </span>
           </p>
           <small className="text-gray-400 my-4 w-7/12">
-            By signing in with an account, you agree to Sciccor's{" "}
+            By signing in with an account, you agree to Scissor's{" "}
             <span className="text-gray-600">
               Terms of Service, Privacy Policy{" "}
             </span>{" "}

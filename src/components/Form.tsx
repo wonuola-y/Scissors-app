@@ -51,7 +51,7 @@ export const Form = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className="  flex flex-col ">
+      <form onSubmit={handleSubmit} className="  flex flex-col">
         <input
           type="url"
           name="url"

@@ -6,6 +6,9 @@ module.exports = {
 ],
   theme: {
     extend:{
+      fontFamily:{
+       'mw': ['Merriweather', 'sans-serif']
+      },
       clamp: {
         '1/2': 'clamp(50%, 100%, 100vw)',
         '2/3': 'clamp(66.67%, 100%, 100vw)'}

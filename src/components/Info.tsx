@@ -52,38 +52,48 @@ const Choose = [
 const Info = () => {
   return (
     <div>
-      
-      <div className=" flex 
-      flex-col w-full items-center justify-around text-center ">
+      <div
+        className=" flex 
+      flex-col w-full items-center justify-around text-center "
+      >
         <div>
-          <h1 className=" text-5xl md:text-6xl leading-normal font-bold py-10">
+          <h1 className=" text-5xl md:text-6xl leading-relaxed font-bold py-10">
             One Stop.
-           <br/>
-            Four <span className="text-blue-600">Possibilities</span>
+            <br />
+            Four <span className="text-blue-600 my-4">Possibilities</span>
           </h1>
         </div>
 
-       <div className="flex  flex-col md:flex-row justify-around w-full">
-       {List.map((item) => (
-          <ul
-            key={item.id}
-            className="flex flex-col  "
-          >
-            <li className="my-4">
-              <b className="text-3xl">{item.title}</b>
-              <br />
-              <small className="text-base max-w-[60px] ">{item.sub}</small>
-            </li>
-          </ul>
-        ))}
-       </div>
+        <div className="flex  flex-col md:flex-row justify-around w-full">
+          {List.map((item) => (
+            <ul key={item.id} className="flex flex-col  ">
+              <li className="my-4">
+                <b className="text-3xl">{item.title}</b>
+                <br />
+                <small className="text-base max-w-[60px] ">{item.sub}</small>
+              </li>
+            </ul>
+          ))}
+        </div>
       </div>
-      <div className="flex  text-center flex-col md:flex-row my-16 justify-around items-center flex-1 border-2 border-solid border-red-400 ">
-        <div className="w-full md:w-5/12 md:text-left  md:flex md:flex-col border-2 border-solid border-red-400 ">
+      <div
+        className="flex 
+      text-center 
+      flex-col md:flex-row
+      my-16 
+      justify-around items-center 
+      flex-1  "
+      >
+        <div
+          className="w-full
+         md:w-5/12 md:text-left
+         md:flex md:flex-col
+          "
+        >
           <h2 className="font-bold text-4xl">
             Why choose <span className="text-blue-600">Scissors</span>
           </h2>
-          <p className=" leading-7 md:max-w-md">
+          <p className=" leading-7 md:max-w-md text-sm">
             Scissors is the hub of everything that has to do with your link
             management. We shorten your URLs, allow you creating custom ones for
             your personal, business, event usage. Our swift QR code creation,
@@ -93,19 +103,34 @@ const Info = () => {
         </div>
         <div className="flex flex-wrap justify-center  md:w-6/12 md:justify-between">
           {Choose.map((item) => (
-            <div className=" flex flex-col md:block border-2 border-solid border-red-400 justify-center items-center md:w-2/5 m-5 " key={item.id}>
-              <img src={item.img} alt="icon" className="w-1/6 border-2 border-solid border-red-400 " />
+            <div
+              className=" flex
+               flex-col 
+              
+               text-sm
+               justify-center items-center 
+               md:w-2/5
+                m-5 md:m-auto"
+              key={item.id}
+            >
+              <img
+                src={item.img}
+                alt="icon"
+                className="w-1/6 "
+              />
               <h3 className="text-xl font-semibold">{item.title}</h3>
-              <p className="leading-6">{item.sub}</p>
+              <p className=" leading-7">{item.sub}</p>
             </div>
           ))}
         </div>
       </div>
       <div className="my-10 flex justify-center ">
-        
-        <Link to='/' className="py-3 px-3 text-white bg-blue-600 rounded-3xl m-4 mb-0">
-        Back to top
-        </Link> 
+        <Link
+          to="/"
+          className="py-3 px-3 text-white bg-blue-600 rounded-3xl m-4 mb-0"
+        >
+          Back to top
+        </Link>
       </div>
     </div>
   );
@@ -113,19 +138,19 @@ const Info = () => {
 
 export default Info;
 // to do
-// 404 page
+// 404 page (Done)
 // error boundary
-// loader 
+// loader (Done)
 // add the add to cart thingy feature ( the feature that updates the pricing thingy)
 // add background to the try it out feature.
-// Footer creation 
+// Footer creation
 // sign up page
-// update the faq 
+// update the faq
 // revolutionizing link optimization
 
 // ongoing
 //firebase
-// get the api for the link fast 
+// get the api for the link fast
 // try using react query to update it
 
 // optional to do (do this after submission)

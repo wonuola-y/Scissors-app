@@ -5,8 +5,8 @@ import rect from "../assets/rect.svg";
 const Hero = () => {
   return (
     <div>
-      <div className="flex flex-col text-center items-center pt-10 md:pt-20">
-        <h1 className="font-semibold  md:text-5xl text-2xl text-center md:max-w-5xl md:flex flex-col md:py-10  pb-5 md:leading-shrug  ">
+      <div className="hero pt-20 flex flex-col text-center items-center  md:pt-20">
+        <h1 className="font-semibold  md:text-5xl text-2xl w-8/12 md:w-full text-center md:max-w-5xl md:flex flex-col md:py-10  pb-5 md:leading-7 md:mt-10  mx-4 m:mx-0">
           <span className="text-center">
             Optimize Your Online Experience with Our{" "}
           </span>
@@ -33,9 +33,9 @@ const Hero = () => {
         </div>
         <div className="flex">
           <div className="absolute left-80">
-            <img src={BgProp} alt="bg item" className=" w-5/6" />
+            <img src={BgProp} alt="bg item" className=" w-5/6 z-10 md:z-0" />
           </div>
-          <div className=" bg-white flex flex-col justify-center items-center border-2 border-solid rounded-xl p-6 border-blue-400 relative z-10 ">
+          <div className=" bg-white flex flex-col justify-center items-center border-2 border-solid rounded-xl p-6 border-blue-400 relative z-20 md:z-10 ">
             <img src={HeroImg} alt="firstImg" className="w-10/12" />
             <p className=" max-w-sm ">
               Seamlessly transform your long URLs into concise and shareable

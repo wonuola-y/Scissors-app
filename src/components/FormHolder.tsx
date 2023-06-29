@@ -9,9 +9,9 @@ export const FormHolder = (props: Props) => {
     const [inputValue, setInputValue] = useState('')
   return (
 
-<div className="flex justify-around items-center py-8 w-full relative  gradient-animation " >
+<div className="flex justify-around items-center py-8 w-full relative  gradient-animation text-sm" >
       
-      <div className="flex max-w-lg flex-col p-8 rounded-xl bg-white relative ">
+      <div className="flex md:max-w-lg w-5/6 flex-col p-8  bg-white relative ">
         <Form />
        <LinkResult inputValue={inputValue} />
         <div>
@@ -20,9 +20,9 @@ export const FormHolder = (props: Props) => {
             <p className="text-blue-500 ">
               By clicking TrimURL, I agree to the{" "}
               <a href="#" className="text-blue-600 font-semibold">
-                Terms and Conditions{" "}
-              </a>
-              ,{" "}
+                Terms and Conditions
+              </a>,
+              {" "}
               <a className="text-blue-600 font-semibold" href="#">
                 Privacy Policy
               </a>{" "}
