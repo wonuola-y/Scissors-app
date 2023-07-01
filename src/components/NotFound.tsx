@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 export const NotFound = () => {
   return (
-    <div className="flex min-h-screen font-mw ">
+    <div className="flex min-h-screen font-mw md:flex-row flex-col justify-center items-center ">
         <div className="w-1/2 flex mx-4 justify-center items-center ">
-<img src={errorImg} alt="hero-img" className="shadow shadow-blue-500/40 rounded-lg "/>
+<img src={errorImg} alt="hero-img" className="hidden md:flex shadow shadow-blue-500/40 rounded-lg "/>
         </div>
         <div className="w-1/2 flex justify-center items-center flex-col">
 <h1 className="text-9xl font-bold animate__animated animate__swing animate__faster animate__repeat-2">4<span className="text-blue-500 ">0</span>4</h1>

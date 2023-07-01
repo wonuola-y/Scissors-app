@@ -23,7 +23,7 @@ export const App: React.FunctionComponent<IAppProps> = (props) => {
     console.log('done');
     
     setLoading(false)
-   }, 4000)
+   }, 100)
   }, [])
   
   return (
