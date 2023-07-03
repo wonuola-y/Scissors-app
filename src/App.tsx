@@ -11,6 +11,7 @@ import Signup from "./components/Signup";
 import { NotFound } from "./components/NotFound";
 import HashLoader from "react-spinners/HashLoader";
 import './App.css';
+import AuthDetails from "./components/AuthDetails";
 // import { AuthRoute } from "./components/context/AuthContext";
 
 export interface IAppProps {}
@@ -39,7 +40,8 @@ export const App: React.FunctionComponent<IAppProps> = (props) => {
     data-testid="loader"
   />
    </div>
-    :   <Routes> 
+    : <div>
+        <Routes> 
     <Route path="/" element={<Home />}></Route>
     <Route path="*" element={<NotFound />}></Route>
     <Route path="/Nav" element={<Nav />}></Route>
@@ -49,7 +51,11 @@ export const App: React.FunctionComponent<IAppProps> = (props) => {
     <Route path="/Faq" element={<Faq />} />
     <Route path="/sign" element={<Signup/>} />
     <Route path="/login" element={<Login />} />
+  
   </Routes>
+  <AuthDetails />
+    </div>
+  
   }
   </div>
   );
