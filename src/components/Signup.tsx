@@ -1,12 +1,28 @@
 import { auth } from "../config/firebase";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useRef, useState, createContext } from "react";
+
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
-const SignUp = () => {
+
+// new additions ---
+type  AuthContextType = {
+  isAuthenticated: boolean;
+}
+const AuthContext = createContext<AuthContextType | undefined>(undefined)
+
+
+
+function Signup() {
   // form states
  const [email, setEmail] = useState('')
  const [password, setPassword] =useState('')
+ const [errorMessage, setErrorMessage] = useState("");
+ const [successMessage, setSuccessMessage] = useState("");
+const emailRef = useRef<any>()
+const passwordRef = useRef<any>()
+const passwordConfirmRef = useRef<any>()
+
 
   function signIn(e:any) {
     e.preventDefault();
@@ -14,10 +30,13 @@ const SignUp = () => {
     .then((useCredential) => {
         console.log(useCredential);
         console.log('success');
-        
+        setSuccessMessage("Login successful!");
+        setErrorMessage("");
       })
       .catch((error) => {
         console.log(error);
+        setErrorMessage(`Check the details again our system says, ${error.message}`);
+        setSuccessMessage("");
       });
   }
 
@@ -43,11 +62,14 @@ const SignUp = () => {
             className="flex flex-col justify-center w-full items-center"
             onSubmit={signIn}
           >
+              {errorMessage && <p className="error">{errorMessage}</p>}
+      {successMessage && <p className="success">{successMessage}</p>}
             <input
               type="text"
               name=" Username"
               placeholder="Username"
               id=""
+              
              
               className="border-2 border-solid border-blue-600 w-8/12 my-4 py-2 px-2 rounded-lg"
             />
@@ -60,6 +82,7 @@ const SignUp = () => {
               onChange={(e)=>{
                 setEmail(e.target.value)
               }}
+              ref={emailRef}
               className="border-2 border-solid border-blue-600 w-8/12 my-4 py-2 px-2 rounded-lg "
             />
             {/* dont forget to add the eye icont ot your passwowrds */}
@@ -72,6 +95,7 @@ const SignUp = () => {
               onChange={(e)=>{
                 setPassword(e.target.value)
               }}
+              ref={passwordRef}
               className="border-2 border-solid border-blue-600 w-8/12 my-4 py-2 px-2 rounded-lg"
             />
             <input
@@ -80,6 +104,7 @@ const SignUp = () => {
               name="retype password"
               placeholder="Retype password"
               id=""
+              ref={passwordConfirmRef}
               onChange={(e)=>{
                 setPassword(e.target.value)
               }}
@@ -117,4 +142,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Signup;

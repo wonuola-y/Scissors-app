@@ -1,21 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Home } from "./components/Home";
-import Login from "./components/Login";
+
 import { Form } from "./components/Form";
 import Info from "./components/Info";
 import Pricing from "./components/Pricing";
 import Faq from "./components/Faq";
 import Nav from "./components/Nav";
-import Signup from "./components/Signup";
+
+
 import { NotFound } from "./components/NotFound";
 import HashLoader from "react-spinners/HashLoader";
 import './App.css';
 import AuthDetails from "./components/AuthDetails";
-// import { AuthRoute } from "./components/context/AuthContext";
+import LoginHolder from "./components/LoginHolder";
+import SignUp from "./components/SignInHolder";
+
 
 export interface IAppProps {}
 export const App: React.FunctionComponent<IAppProps> = (props) => {
+ 
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -26,6 +30,7 @@ export const App: React.FunctionComponent<IAppProps> = (props) => {
     setLoading(false)
    }, 40)
   }, [])
+  
   
   return (
   <div >
@@ -49,11 +54,14 @@ export const App: React.FunctionComponent<IAppProps> = (props) => {
     <Route path="/Features" element={<Info />} />
     <Route path="/Pricing" element={<Pricing />} />
     <Route path="/Faq" element={<Faq />} />
-    <Route path="/sign" element={<Signup/>} />
-    <Route path="/login" element={<Login />} />
+    <Route path="/sign" element={<SignUp />} />
+
+    <Route path="/login" element={<LoginHolder />} >
+      
+    </Route>
   
   </Routes>
-  <AuthDetails />
+<AuthDetails children={undefined} />
     </div>
   
   }
