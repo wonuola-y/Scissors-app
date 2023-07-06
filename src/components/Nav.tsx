@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
 import { useState } from "react";
 import "./style.css";
+import Button from "./Button";
 // import { Link } from "react-router-dom";
 
 const NavList = [
@@ -79,9 +80,7 @@ const Nav = () => {
                md:justify-between 
               md:w-10/12 w-11/12 
  bg-cover md:bg-contain min-h-screen md:h-1/6  md:min-h-0 aniamte animate__fadeInUp
-  ${
-                isOpen ? "flex" : "hidden"
-              }`}
+  ${isOpen ? "flex" : "hidden"}`}
       >
         <label htmlFor="op" className="md:hidden"></label>
         <nav
@@ -98,10 +97,19 @@ const Nav = () => {
           ))}
         </nav>
         <div className="flex justify-around w-full md:w-3/12  ">
-          <Link to='/login' className="text-blue-600">Log In</Link>
-          <Link to='/sign' className="bg-blue-600 rounded-3xl px-4 py-3 md:px-3 text-white">
-            Try for Free
+          <Link to="/login" className="text-blue-600">
+            Log In
           </Link>
+       <Button 
+       value='Try for Free'
+       >
+           <Link
+            to="/sign"
+            className="bg-blue-600 rounded-3xl px-4 py-3 md:px-3 text-white"
+          >
+           hi
+          </Link>
+       </Button>
         </div>
       </div>
     </div>
