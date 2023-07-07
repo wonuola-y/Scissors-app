@@ -47,12 +47,8 @@ const passwordConfirmRef = useRef<any>()
           className=" w-11/12 flex justify-center items-center
       flex-col"
         >
-          <h3 className="my-2">Sign up with:</h3>
-          <div className="my-4 mt-2 w-full flex items-center justify-center">
-            <button className="bg-blue-600 rounded py-3 px-3 w-1/5 text-white ">
-              Google
-            </button>
-          </div>
+          <h3 className="my-2">Sign up</h3>
+          
           <div className="w-full flex justify-center items-center">
             <p className="w-3/12 h-[1.3px] bg-gray-400"></p>
             <p className="mx-4 text-gray-600">Or</p>
