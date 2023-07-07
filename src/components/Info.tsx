@@ -51,8 +51,9 @@ const Choose = [
 ];
 const Info = () => {
   return (
-    <div className="pt-20 md:pt-[8rem]">
-      <div
+    <div className="pt-20 md:pt-[8rem] flex flex-col items-center ">
+    <div className="max-w-7xl ">
+    <div
         className=" flex 
       flex-col w-full items-center justify-around text-center "
       >
@@ -132,6 +133,7 @@ const Info = () => {
           Back to top
         </Link>
       </div>
+    </div>
     </div>
   );
 };

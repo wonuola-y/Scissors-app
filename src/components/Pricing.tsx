@@ -42,7 +42,7 @@ const Prices = [
 ];
 const Pricing = () => {
   return (
-    <div className="pt-15 md:pt-[8rem]">
+    <div className="pt-15 md:pt-[8rem] ">
       <div className="py-10 flex flex-col w-full items-center justify-around ">
         <div className="flex flex-col justify-center items-center w-9/12">
           <h2 className="text-4xl font-semibold my-2 text-center">
