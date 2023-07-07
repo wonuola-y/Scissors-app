@@ -66,7 +66,7 @@ const passwordConfirmRef = useRef<any>()
       flex-col"
         >
           <h3 className="my-2 text-4xl font-bold">Sign up</h3>
-          <p className="text-center text-md">Shorten Links have become seamless! <br/>
+          <p className="text-center text-md">Shortening links have become seamless! <br/>
           Join us today</p>
          
           <form
