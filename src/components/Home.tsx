@@ -1,6 +1,4 @@
 import React from "react";
-import Nav from "./Nav";
-
 import Hero from "./Heo";
 import Info from "./Info";
 import Pricing from "./Pricing";
@@ -15,8 +13,6 @@ export const Home: React.FC<IHomeProps> = (props) => {
   return (
     <div className=" font-mw mx-3 md:mx-0">
       {/* Header */}
-
-      <Nav />
       <Hero />
       <Info />
       <Pricing />

@@ -45,16 +45,16 @@ const Pricing = () => {
     <div className="pt-20 md:pt-[8rem]">
       <div className="py-10 flex flex-col w-full items-center justify-around ">
         <div className="flex flex-col justify-center items-center w-9/12">
-          <h2 className="text-4xl font-semibold my-2">
+          <h2 className="text-4xl font-semibold my-2 text-center">
             A <span className="text-blue-600">price perfect</span> for your
             needs.
           </h2>
-          <p className="text-center">
+          <p className="text-center w-full my-5">
             From catering for your personal, business, event, socials needs, you
             can be rest assured we have you in mind in our pricing.
           </p>
         </div>
-        <div className="flex flex-col  md:flex-row w-full my-20 justify-center ">
+        <div className="flex flex-col  md:flex-row w-full my-5 md:my-20 justify-center ">
           {Prices.map((price) => (
             <div
               className=" border-[1px] border-solid
@@ -62,11 +62,11 @@ const Pricing = () => {
        py-8 px-4
        rounded-lg
        flex flex-col justify-start
-       hover:scale-125
+       md:hover:scale-125
       hover:bg-slate-800 hover:text-white hover:text-sm hover:border-none hover:transition-all
        hover: duration-[1s]
        text-sm
-       my-5
+       my-5 
        "
               key={price.id}
             >
@@ -117,7 +117,7 @@ const Pricing = () => {
             </div>
           ))}
         </div>
-        <div>
+        <div className="w-full flex justify-center md:w-1/3">
           <Button>
             <Link to="/NotShown">Select Pricing</Link>
           </Button>

@@ -17,6 +17,8 @@ function Signup() {
   // form states
  const [email, setEmail] = useState('')
  const [password, setPassword] =useState('')
+ const [passwordConfirm, setPasswordConfirm] =useState('')
+
  const [errorMessage, setErrorMessage] = useState("");
  const [successMessage, setSuccessMessage] = useState("");
 const emailRef = useRef<any>()
@@ -26,6 +28,15 @@ const passwordConfirmRef = useRef<any>()
 
   function signIn(e:any) {
     e.preventDefault();
+    if (passwordRef != passwordConfirmRef) {
+      // e.preventDefault();
+      setErrorMessage(`Passwords don't match`);
+
+      
+    } else {
+      setErrorMessage("");
+    }
+ 
     createUserWithEmailAndPassword(auth, email, password)
     .then((useCredential) => {
         console.log(useCredential);
@@ -37,7 +48,14 @@ const passwordConfirmRef = useRef<any>()
         console.log(error);
         setErrorMessage(`Check the details again our system says, ${error.message}`);
         setSuccessMessage("");
+        if (passwordRef != passwordConfirmRef) {
+          
+          setErrorMessage(`Passwords don't match`);
+    return
+          
+        } 
       });
+      
   }
 
   return (
@@ -47,15 +65,18 @@ const passwordConfirmRef = useRef<any>()
           className=" w-11/12 flex justify-center items-center
       flex-col"
         >
-          <h3 className="my-2">Sign up</h3>
-          
+          <h3 className="my-2 text-4xl font-bold">Sign up</h3>
+          <p className="text-center text-md">Shorten Links have become seamless! <br/>
+          Join us today</p>
          
           <form
             className="flex flex-col justify-center w-full items-center"
             onSubmit={signIn}
           >
-              {errorMessage && <p className="error">{errorMessage}</p>}
-      {successMessage && <p className="success">{successMessage}</p>}
+             <div className="font-semibold ">
+             {errorMessage && <p className="error p-5 my-5 rounded-xl bg-red-100 text-red-500 ">{errorMessage}</p>}
+      {successMessage && <p className="success bg-green-200 text-green-600">{successMessage}</p>}
+             </div>
             <input
               type="text"
               name=" Username"
@@ -92,13 +113,13 @@ const passwordConfirmRef = useRef<any>()
             />
             <input
               type="password"
-              value={password}
+              value={passwordConfirm}
               name="retype password"
               placeholder="Retype password"
               id=""
               ref={passwordConfirmRef}
               onChange={(e)=>{
-                setPassword(e.target.value)
+                setPasswordConfirm(e.target.value)
               }}
               className="border-2 border-solid border-blue-600 w-8/12 mt-4 py-2 px-2 rounded-lg "
             />

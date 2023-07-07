@@ -27,7 +27,7 @@ const Hero = () => {
           to reinforce your brand presence and enhance user engagement.
         </p>
         <div className="my-8  w-full flex   justify-center">
-         <div className="w-4/12">
+         <div className="w-full md:w-4/12">
          <Button >
          <Link to='/sign' >
             Sign Up{" "}
@@ -48,7 +48,7 @@ const Hero = () => {
             </p>
           </div>
         </div>
-        <div className=" my-28">
+        <div className=" my-10 md:my-28">
           <img src={rect} alt="thin rectangle" />
         </div>
       </div>

@@ -45,7 +45,7 @@ const Nav = () => {
      md:bg-opacity-20"
     >
       {/* logo */}
-      <div className="md:p-4 flex  w-3/12 md:w-2/12">
+      <div className="md:p-4 flex w-3/12 md:w-2/12">
       <Link to='/'> <img src={logo} alt="logo" /></Link>
       </div>
 
