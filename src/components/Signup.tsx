@@ -49,11 +49,7 @@ const passwordConfirmRef = useRef<any>()
         >
           <h3 className="my-2">Sign up</h3>
           
-          <div className="w-full flex justify-center items-center">
-            <p className="w-3/12 h-[1.3px] bg-gray-400"></p>
-            <p className="mx-4 text-gray-600">Or</p>
-            <p className="w-3/12 h-[1.3px] bg-gray-400"></p>
-          </div>
+         
           <form
             className="flex flex-col justify-center w-full items-center"
             onSubmit={signIn}
