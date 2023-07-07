@@ -5,7 +5,7 @@ import Hero from "./Heo";
 import Info from "./Info";
 import Pricing from "./Pricing";
 import Faq from "./Faq";
-import Starting from "./Starting";
+
 import Footer from "./Footer-section";
 import { FormHolder } from "./FormHolder";
 
@@ -22,7 +22,7 @@ export const Home: React.FC<IHomeProps> = (props) => {
       <Pricing />
       <FormHolder />
       <Faq />
-      <Starting />
+      
       <Footer />
     </div>
   );
