@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div>
       <div className="hero pt-20 flex flex-col text-center items-center  md:pt-20">
-        <h1 className="font-semibold  md:text-5xl text-2xl w-8/12 md:w-full text-center md:max-w-5xl md:flex flex-col md:py-10  pb-5 md:leading-normal md:mt-10  mx-4 m:mx-0">
+        <h1 className="font-semibold  md:text-5xl text-2xl w-8/12 md:w-full text-center md:max-w-5xl md:flex flex-col md:py-10  pb-5 md:leading-7 md:mt-10  mx-4 m:mx-0">
           <span className="text-center">
             Optimize Your Online Experience with Our{" "}
           </span>
