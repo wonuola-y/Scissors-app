@@ -19,7 +19,7 @@ const FAQ: fq[] = [
   {
     id: 3,
     question: "Are the shortened links permanent ? Will they expire ?",
-    answer: " No, they don't expre.",
+    answer: " No, they don't expire.",
   },
   {
     id: 4,
