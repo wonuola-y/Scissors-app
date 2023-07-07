@@ -3,6 +3,7 @@ import HeroImg from "../assets/Hero-img.svg";
 import BgProp from "../assets/bgitem.svg";
 import rect from "../assets/rect.svg";
 import { Link } from "react-router-dom";
+import Button from "./Button";
 const Hero = () => {
   return (
     <div>
@@ -14,7 +15,7 @@ const Hero = () => {
           <br className="md:block hidden" />
           <span className="flex w-full text-center justify-center md:my-4 ">
             Advanced{" "}
-            <span className="text-blue-600 flex flex-col mx-3">
+            <span className="text-blue-600 flex flex-col md:mx-3">
               URL Shortening <img className=" hidden md:flex md:w-70" src={span} alt="hypen" />
             </span>{" "}
             Solution
@@ -25,12 +26,15 @@ const Hero = () => {
           Utilize custom slugs, branded links, and domain customization options
           to reinforce your brand presence and enhance user engagement.
         </p>
-        <div className="my-8">
-          <Link to='/sign' className=" bg-blue-600 rounded-3xl p-2
-           px-4 text-white mx-5">
+        <div className="my-8  w-full flex   justify-center">
+         <div className="w-4/12">
+         <Button >
+         <Link to='/sign' >
             Sign Up{" "}
           </Link>
-          <button className="text-blue-600"> Learn more</button>
+         </Button>
+          <button className="text-blue-600 mx-5"> Learn more</button>
+         </div>
         </div>
         <div className="flex">
           <div className="absolute left-80">

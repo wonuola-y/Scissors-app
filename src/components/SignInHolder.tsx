@@ -17,7 +17,7 @@ function SignUp() {
       };
     }, []);
   return (
-    <div>
+    <div className="pt-20 md:pt-[8rem]">
         {
           isLoggedIn ? <FormHolder /> : <Signup />  
         }

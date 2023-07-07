@@ -13,7 +13,7 @@ interface IHomeProps {}
 
 export const Home: React.FC<IHomeProps> = (props) => {
   return (
-    <div className=" font-mw">
+    <div className=" font-mw mx-3 md:mx-0">
       {/* Header */}
 
       <Nav />

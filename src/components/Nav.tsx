@@ -2,11 +2,12 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
 import { useState } from "react";
 import "./style.css";
+import Button from "./Button";
 
 const NavList = [
   {
     name: "My URLs",
-    link: "/Form",
+    link: "/sign",
   },
   {
     name: "Features",
@@ -19,7 +20,7 @@ const NavList = [
 
   {
     name: "FAQs",
-    link: "/FAQs",
+    link: "/Faq",
   },
 ];
 const Nav = () => {
@@ -44,8 +45,8 @@ const Nav = () => {
      md:bg-opacity-20"
     >
       {/* logo */}
-      <div className="md:p-4 flex  w-2/12">
-        <img src={logo} alt="logo" />
+      <div className="md:p-4 flex  w-3/12 md:w-2/12">
+      <Link to='/'> <img src={logo} alt="logo" /></Link>
       </div>
 
       {/* menu */}
@@ -54,7 +55,7 @@ const Nav = () => {
           className="block  cursor-pointer relative z-10 md:hidden"
           onClick={toggleNavbar}
         >
-          =
+         <img src="https://img.icons8.com/?size=2x&id=82749&format=png" alt="menu" className="w-5" />
         </span>
       </div>
 
@@ -63,7 +64,7 @@ const Nav = () => {
         className={`md:flex
          flex-col md:flex-row
           absolute
-          bg-blue-700
+          bg-blue-500
       
            bg-clip-padding
            backdrop-filter
@@ -77,7 +78,7 @@ const Nav = () => {
               md:bg-none
                md:justify-between 
               md:w-10/12 w-11/12 
- bg-cover md:bg-contain min-h-screen md:h-1/6  md:min-h-0 aniamte animate__fadeInUp
+ bg-cover min-h-screen md:h-1/6  md:min-h-0 aniamte animate__fadeInUp
   ${isOpen ? "flex" : "hidden"}`}
       >
         <label htmlFor="op" className="md:hidden"></label>
@@ -95,9 +96,10 @@ const Nav = () => {
           ))}
         </nav>
         <div className="flex justify-around w-full md:w-3/12  ">
-          <button
-            type="submit"
-            className="py-2 my-4 rounded-3xl text-white bg-blue-600 w-3/5 cursor-pointer"
+          {/* button */}
+          <Button
+            
+    
           >
             <Link
               to="/sign"
@@ -105,7 +107,7 @@ const Nav = () => {
             >
               Sign Up
             </Link>
-          </button>
+          </Button>
         </div>
       </div>
     </div>

@@ -51,7 +51,7 @@ const Choose = [
 ];
 const Info = () => {
   return (
-    <div>
+    <div className="pt-20 md:pt-[8rem]">
       <div
         className=" flex 
       flex-col w-full items-center justify-around text-center "

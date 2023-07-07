@@ -4,7 +4,7 @@ import Linkendin from "../assets/linkendin.svg";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col md:flex-row items-center border-2 border-yellow-300 border-solid md:justify-between md:items-start w-full border-t mt-20 p-10">
+    <footer className="flex flex-col md:flex-row items-center  md:justify-between md:items-start w-full border-t mt-20 p-10">
       <div className="md:w-2/12 mb-5 md:mb-0">
         <img src={logo} alt="logo" />
         <i className="not-italic text-[12px]">Copyright Wonuola 2023 </i>

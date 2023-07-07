@@ -9,7 +9,7 @@ export const FormHolder = (props: Props) => {
     const [inputValue, setInputValue] = useState('')
   return (
 
-<div className="flex justify-around items-center py-8 w-full relative  gradient-animation text-sm" >
+<div className="flex justify-around items-center py-8 w-full relative  gradient-animation text-sm pt-20 md:pt-[8rem]" >
       
       <div className="flex md:max-w-lg w-5/6 flex-col p-8  bg-white relative ">
         <Form />

@@ -1,4 +1,6 @@
+import { Button } from "react-bootstrap";
 import Check from "../assets/check.svg";
+import { Link } from "react-router-dom";
 
 const Prices = [
   {
@@ -40,10 +42,13 @@ const Prices = [
 ];
 const Pricing = () => {
   return (
-    <div>
+    <div className="pt-20 md:pt-[8rem]">
       <div className="py-10 flex flex-col w-full items-center justify-around ">
         <div className="flex flex-col justify-center items-center w-9/12">
-          <h2 className="text-4xl font-semibold my-2">A <span className="text-blue-600">price perfect</span> for your needs.</h2>
+          <h2 className="text-4xl font-semibold my-2">
+            A <span className="text-blue-600">price perfect</span> for your
+            needs.
+          </h2>
           <p className="text-center">
             From catering for your personal, business, event, socials needs, you
             can be rest assured we have you in mind in our pricing.
@@ -68,39 +73,54 @@ const Pricing = () => {
               <h3 className="py-3">{price.title}</h3>
               <p className="text-xl font-bold">{price.price}</p>
               <p>{price.p}</p>
-             
-                <div className="flex my-2" >
-                <img className="mx-3  hover:text-white" src={price.img} alt="check-icon" /> 
-                <p className="flex text-sm">
-               {price.perkOne} </p>  
-              
-                </div>
-               <div className="flex my-2">
-               <img className="mx-3 hover:text-white" src={price.img} alt="check-icon" /> 
-               <p className="flex text-sm">
-                   {price.perkTwo}</p> 
-               </div>
-                 <div className="flex my-2">
-                 <img className="mx-3 hover:text-white" src={price.img} alt="check-icon" /> 
-                 <p className="flex text-sm ">
-                  {price.perkThree}</p> 
-                 </div>
-                <div className=" flex my-2">
-                <img className="mx-3 hover:text-white" src={price.img} alt="check-icon" /> 
-                <p className="flex text-sm">
-                  {price.perkFive}</p>  
-                </div>
-                <div className="flex my-2">
-                <img className="mx-3 hover:text-white" src={price.img} alt="check-icon" /> 
-                <p className="flex text-sm">
-                  {price.perkSix}</p>  
-                </div>
-           
+
+              <div className="flex my-2">
+                <img
+                  className="mx-3  hover:text-white"
+                  src={price.img}
+                  alt="check-icon"
+                />
+                <p className="flex text-sm">{price.perkOne} </p>
+              </div>
+              <div className="flex my-2">
+                <img
+                  className="mx-3 hover:text-white"
+                  src={price.img}
+                  alt="check-icon"
+                />
+                <p className="flex text-sm">{price.perkTwo}</p>
+              </div>
+              <div className="flex my-2">
+                <img
+                  className="mx-3 hover:text-white"
+                  src={price.img}
+                  alt="check-icon"
+                />
+                <p className="flex text-sm ">{price.perkThree}</p>
+              </div>
+              <div className=" flex my-2">
+                <img
+                  className="mx-3 hover:text-white"
+                  src={price.img}
+                  alt="check-icon"
+                />
+                <p className="flex text-sm">{price.perkFive}</p>
+              </div>
+              <div className="flex my-2">
+                <img
+                  className="mx-3 hover:text-white"
+                  src={price.img}
+                  alt="check-icon"
+                />
+                <p className="flex text-sm">{price.perkSix}</p>
+              </div>
             </div>
           ))}
         </div>
         <div>
-          <button className="rounded-3xl bg-blue-600 px-6 py-3 text-white">Select Pricing</button>
+          <Button>
+            <Link to="/NotShown">Select Pricing</Link>
+          </Button>
         </div>
       </div>
     </div>

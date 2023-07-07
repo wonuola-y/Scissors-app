@@ -47,7 +47,7 @@ const toggle = (index: number) => {
   
 }
   return (
-    <div className="mt-20">
+    <div className="pt-20 md:pt-40">
       <h1 className="text-center text-3xl font-bold">FAQs</h1>
 
 <div className="flex flex-col justify-center items-center ">
