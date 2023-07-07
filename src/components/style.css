@@ -33,7 +33,10 @@
   }
   
   
-@media screen and (min-width :800px){
-  
+@media screen and (max-width:800px){
+  .gradient-animation{
+background-color: #368bd6;
+animation: none;
+  }
 
 }

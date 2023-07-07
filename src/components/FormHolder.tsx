@@ -1,15 +1,14 @@
 import { useState } from "react";
 import { Form } from "./Form";
 import './style.css'
-import bgImg from "../assets/bgImg.svg";
-import bgImgsec from "../assets/bgImgsec.svg";
+
 import { LinkResult } from "./LinkResult";
 type Props = {};
 export const FormHolder = (props: Props) => {
     const [inputValue, setInputValue] = useState('')
   return (
 
-<div className="flex justify-around items-center py-8 w-full relative  gradient-animation text-sm pt-20 md:pt-[8rem]" >
+<div className="flex justify-around items-center py-8 w-full relative  text-sm pt-10 md:pt-[8rem]   gradient-animation " >
       
       <div className="flex md:max-w-lg w-5/6 flex-col p-8  bg-white relative ">
         <Form />
