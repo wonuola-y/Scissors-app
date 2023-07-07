@@ -70,7 +70,7 @@ export const Form = () => {
           onClick={handleClick}
           type="submit"
         >
-          Try for Free
+          Trim URL 
         </button>
         {/* </Link> */}
       </form>

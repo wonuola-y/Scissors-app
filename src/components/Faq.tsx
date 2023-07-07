@@ -8,12 +8,12 @@ interface fq {
 const FAQ: fq[] = [
   {
     id: 1,
-    question: "How does URL shortening work ?",
+    question: "How does URL shortening work?",
     answer: " URL shortening works by taking a long URL and creating a shorter, condensed version that redirects to the original URL. When a user clicks on the shortened link, they are redirected to the intended destination.",
   },
   {
     id: 2,
-    question: "Is it necessary to create an account to use the URL shortening service ?",
+    question: "Is it necessary to create an account to use the URL shortening service?",
     answer: " Yes it is.",
   },
   {
@@ -28,12 +28,12 @@ const FAQ: fq[] = [
   },
   {
     id: 5,
-    question: "What is a QR code ?",
+    question: "What is a QR code?",
     answer: " According to bit.ly, 'Quick response or QR, is a type of barcode that can store a multitude of information. The obvious difference between a QR Code and Barcode is its appearance. A QR Code is always in the shape of a square and contains smaller, even blocks similar to Tetris. A Barcode, on the other hand, has vertical bars in different thicknesses and is often accompanied by a serial number.'",
   },
   {
     id: 6,
-    question: "Is there an API available for integrating  URL shortening into my own applications or websites ?",
+    question: "Is there an API available for integrating  URL shortening into my own applications or websites?",
     answer: " Not availble yet.",
   }
   
