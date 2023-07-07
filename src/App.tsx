@@ -13,7 +13,7 @@ import { NotFound } from "./components/NotFound";
 import HashLoader from "react-spinners/HashLoader";
 import './App.css';
 import AuthDetails from "./components/AuthDetails";
-import LoginHolder from "./components/LoginHolder";
+
 import SignUp from "./components/SignInHolder";
 
 
@@ -55,10 +55,6 @@ export const App: React.FunctionComponent<IAppProps> = (props) => {
     <Route path="/Pricing" element={<Pricing />} />
     <Route path="/Faq" element={<Faq />} />
     <Route path="/sign" element={<SignUp />} />
-
-    <Route path="/login" element={<LoginHolder />} >
-      
-    </Route>
   
   </Routes>
 <AuthDetails children={undefined} />
