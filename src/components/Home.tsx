@@ -11,7 +11,7 @@ interface IHomeProps {}
 
 export const Home: React.FC<IHomeProps> = (props) => {
   return (
-    <div className=" font-mw mx-3 md:mx-0 container max-w-3xl">
+    <div className=" font-mw mx-3 md:mx-0 container ">
       {/* Header */}
       <Hero />
       <Info />
