@@ -1,6 +1,6 @@
-import { Button } from "react-bootstrap";
 import Check from "../assets/check.svg";
 import { Link } from "react-router-dom";
+import Button from "./Button";
 
 const Prices = [
   {
