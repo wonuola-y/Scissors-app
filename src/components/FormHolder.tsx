@@ -18,11 +18,11 @@ export const FormHolder = (props: Props) => {
           <div className="flex justify-around ">
             <p className="text-blue-500 ">
               By clicking TrimURL, I agree to the{" "}
-              <a href="#" className="text-blue-600 font-semibold">
+              <a href="/" className="text-blue-600 font-semibold">
                 Terms and Conditions
               </a>,
               {" "}
-              <a className="text-blue-600 font-semibold" href="#">
+              <a className="text-blue-600 font-semibold" href="/">
                 Privacy Policy
               </a>{" "}
               and Use of Cookies.

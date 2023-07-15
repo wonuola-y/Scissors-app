@@ -27,9 +27,9 @@ export const LinkResult = ({ inputValue }: any) => {
   useEffect(() => {
     if (inputValue.length) {
       fetchData();
+      return
     }
-
-    return () => {};
+   
   }, [inputValue]);
 
   useEffect(() => {

@@ -59,12 +59,14 @@ const toggle = (index: number) => {
         </h1>
         <b className={` cursor-pointer ${active === id ? active : ''}`}>+</b>
   </div>
+        <div className="my-4">
         {active === id && <p className="text-sm p-5 
         bg-blue-400 bg-clip-padding
            backdrop-filter
            backdrop-blur-lg
            rounded-lg
            bg-opacity-10 ">{i.answer}</p> }
+        </div>
         <hr />
   </div>
 ))}

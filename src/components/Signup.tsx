@@ -1,14 +1,10 @@
 import { auth } from "../config/firebase";
 import { Link } from "react-router-dom";
-import { useRef, useState, createContext } from "react";
+import { useRef, useState } from "react";
 
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
-// new additions ---
-type AuthContextType = {
-  isAuthenticated: boolean;
-};
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
+
 
 function Signup() {
   // form states
@@ -31,11 +27,11 @@ function Signup() {
   }
   function signIn(e: any) {
     e.preventDefault();
-    if (password != passwordConfirm) {
+    if (password !== passwordConfirm) {
       setErrorMessage(`Passwords don't match`);
       return;
     } else if (password === "" || passwordConfirm === "" || email === "") {
-      setErrorMessage(`Field Required`);
+      setErrorMessage(`Fields Required`);
       return;
     } else {
       setErrorMessage("");
@@ -49,9 +45,7 @@ function Signup() {
         setErrorMessage("");
       })
       .catch((error) => {
-        {
-          console.log(error);
-          setErrorMessage(
+        {setErrorMessage(
             `Check the details again our system says, ${error.message}`
           );
           setSuccessMessage("");
@@ -76,7 +70,7 @@ function Signup() {
             className="flex flex-col justify-center w-full items-center"
             onSubmit={signIn}
           >
-            <div className="font-semibold ">
+            <div className="font-semibold">
               {errorMessage && (
                 <p className="error p-5 my-5 rounded-xl bg-red-100 text-red-500 ">
                   {errorMessage}
@@ -123,48 +117,46 @@ function Signup() {
               <button onClick={togglePasswordView}>
                 {passwordVisible ? (
                   <img
-                  src="https://img.icons8.com/?size=2x&id=mVo7XYRsVjnm&format=png"
-                  alt="padlock open"
-                  className="w-5"
-                />
+                    src="https://img.icons8.com/?size=2x&id=mVo7XYRsVjnm&format=png"
+                    alt="padlock open"
+                    className="w-5"
+                  />
                 ) : (
                   <img
-                  src="https://img.icons8.com/?size=2x&id=85056&format=png"
-                  alt="padlock"
-                  className="w-5"
-                />
-                  
+                    src="https://img.icons8.com/?size=2x&id=85056&format=png"
+                    alt="padlock"
+                    className="w-5"
+                  />
                 )}
               </button>
             </div>
             <div className=" flex justify-between border-2 border-solid border-blue-600 w-8/12 my-4 py-2 px-2 rounded-lg ">
-            <input
-              type={passwordConfirmVisible ? "text" : "password"}
-              value={passwordConfirm}
-              name="retype password"
-              placeholder="Retype password"
-              id=""
-              ref={passwordConfirmRef}
-              onChange={(e) => {
-                setPasswordConfirm(e.target.value);
-              }}
-             
-            />
-            <button onClick={togglePasswordConfirmView}>
-              {passwordConfirmVisible ? (
-               <img
-               src="https://img.icons8.com/?size=2x&id=mVo7XYRsVjnm&format=png"
-               alt="padlock open"
-               className="w-5"
-             />
-              ) : (
-                <img
-                  src="https://img.icons8.com/?size=2x&id=85056&format=png"
-                  alt="padlock"
-                  className="w-5"
-                />
-              )}
-            </button>
+              <input
+                type={passwordConfirmVisible ? "text" : "password"}
+                value={passwordConfirm}
+                name="retype password"
+                placeholder="Retype password"
+                id=""
+                ref={passwordConfirmRef}
+                onChange={(e) => {
+                  setPasswordConfirm(e.target.value);
+                }}
+              />
+              <button onClick={togglePasswordConfirmView}>
+                {passwordConfirmVisible ? (
+                  <img
+                    src="https://img.icons8.com/?size=2x&id=mVo7XYRsVjnm&format=png"
+                    alt="padlock open"
+                    className="w-5"
+                  />
+                ) : (
+                  <img
+                    src="https://img.icons8.com/?size=2x&id=85056&format=png"
+                    alt="padlock"
+                    className="w-5"
+                  />
+                )}
+              </button>
             </div>
             {/* dont forget to add the eye icont ot your passwowrds */}
             <small className="text-gray-600 flex justify-start items-start my-4 w-7/12">
