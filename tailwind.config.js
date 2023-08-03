@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend:{
       fontFamily:{
-       'play': ['Plus Jakarta Sans', 'open sans']
+       'play': ['open sans']
       },
       clamp: {
         '1/2': 'clamp(50%, 100%, 100vw)',

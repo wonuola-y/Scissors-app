@@ -43,7 +43,8 @@ export const App: React.FunctionComponent<IAppProps> = (props) => {
           />
         </div>
       ) : (
-        <div>
+        <div className='container
+        '>
           <Nav />
           <Routes>
             <Route path="/" element={<Home />}></Route>

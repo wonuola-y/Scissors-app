@@ -21,7 +21,7 @@ const Hero = () => {
             Solution
           </span>
         </h1>
-        <p className="max-w-2xl leading-8 py-3 pt-0">
+        <p className="max-w-xl leading-8 mx-2 py-3 pt-0">
           Personalize your shortened URLs to align with your brand identity.
           Utilize custom slugs, branded links, and domain customization options
           to reinforce your brand presence and enhance user engagement.
@@ -40,7 +40,7 @@ const Hero = () => {
           <div className="absolute left-80">
             <img src={BgProp} alt="bg item" className=" w-5/6 z-10 md:z-0" />
           </div>
-          <div className=" bg-white flex flex-col justify-center items-center border-2 border-solid rounded-xl p-6 border-blue-400 relative z-20 md:z-10 ">
+          <div className=" mx-2 bg-white flex flex-col justify-center items-center border-2 border-solid rounded-xl p-6 border-blue-400 relative z-20 md:z-10 ">
             <img src={HeroImg} alt="firstImg" className="w-10/12" />
             <p className=" max-w-sm ">
               Seamlessly transform your long URLs into concise and shareable

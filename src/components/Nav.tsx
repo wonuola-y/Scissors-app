@@ -37,7 +37,7 @@ const Nav = () => {
      flex justify-between md:justify-between
    absolute
      z-30 md:fixed 
-     p-4 
+     py-4 
     md:bg-blue-100 
      md:rounded-lg bg-clip-padding
      md:backdrop-filter
