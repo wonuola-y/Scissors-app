@@ -33,11 +33,10 @@ const Nav = () => {
       className="
       nav
      w-full
-     flex justify-between items-center md:justify-between
+     flex justify-between flex-col items-center md:justify-between
    absolute
      z-30 md:fixed 
-     py-4
-     px-6
+     py-4 px-3
     md:bg-blue-100 
      md:rounded-lg bg-clip-padding
      md:backdrop-filter
@@ -45,6 +44,7 @@ const Nav = () => {
      md:bg-opacity-20"
     >
       {/* logo */}
+      <div className="flex justify-between items-center w-full md:hidden">
       <div className="md:p-4 flex w-3/12 md:w-2/12">
       <Link to='/'> <img src={logo} alt="logo" /></Link>
       </div>
@@ -59,35 +59,40 @@ const Nav = () => {
         </span>
       </div>
 
+      </div>
       {/* nav */}
       <div
         className={`md:flex
          flex-col md:flex-row
-          absolute
-          bg-blue-500
-      
+         min-h-screen 
+      items-center
+         w-full
+        bg-blue-500
            bg-clip-padding
            backdrop-filter
            backdrop-blur-lg
            rounded-lg
            bg-opacity-10
-             p-4 
+             p-1
+
               md:relative  md:z-auto
               md:bg-transparent  
-              text-start
+              
               md:bg-none
+              md:backdrop-blur-0
                md:justify-between 
-              md:w-10/12 w-11/12 
- bg-cover min-h-screen md:h-1/6  md:min-h-0 aniamte animate__fadeInUp
+              md:w-full 
+ bg-cover 
+ md:h-1/6  md:min-h-0 
   ${isOpen ? "flex" : "hidden"}`}
       >
-        <label htmlFor="op" className="md:hidden"></label>
         <nav
-          className={`flex justify-start  items-start flex-col md:flex-row md:justify-around md:items-center  p-8 md:p-0 w-9/12  text-sm transition-all`}
+          className={`md:borer-2 md:border-red-400  text-center md:border-solid flex justify-center  items-center flex-col md:flex-row md:justify-around md:items-center  p-4 md:p-0 w-9/12  text-sm transition-all md:w-screen `}
         >
+          <Link to='/'><img src={logo} alt="logo" className="hidden md:block" /></Link>
           {NavList.map((item, id: number) => (
             <Link
-              className="hover:text-blue-600 my-5 md:my-0 font-bold text-md md:font-semibold md:text-sm"
+              className="hover:text-blue-600  my-5 md:my-0 font-semibold text-md md:font-semibold md:text-sm"
               to={item.link}
               key={id}
             >
@@ -95,11 +100,9 @@ const Nav = () => {
             </Link>
           ))}
         </nav>
-        <div className="flex justify-around w-full md:w-3/12  ">
+        <div className="flex justify-center  md:justify-around w-full md:w-3/12  ">
           {/* button */}
           <Button
-            
-    
           >
             <Link
               to="/sign"
@@ -108,9 +111,12 @@ const Nav = () => {
               Sign Up
             </Link>
           </Button>
+          </div>
         </div>
       </div>
-    </div>
+  
+    
+    
   );
 };
 
