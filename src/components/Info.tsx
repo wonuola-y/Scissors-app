@@ -92,7 +92,7 @@ const Info = () => {
          md:flex md:flex-col
           "
         >
-          <h2 className="font-bold text-4xl">
+          <h2 className="font-bold text-4xl my-3">
             Why choose <span className="text-blue-600">Scissors</span>
           </h2>
           <p className=" leading-7  md:max-w-md text-sm">
