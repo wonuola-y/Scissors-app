@@ -12,7 +12,7 @@
   
   .gradient-animation {
     background: #368bd6;
-    background: linear-gradient(315deg, rgb(12, 6, 99) 3%, rgba(60,132,206,1) 38%, rgb(102, 48, 238) 68%, rgb(2, 48, 105) 98%);
+    background: linear-gradient(315deg, #89CFF0 3%, #73C2FB 38%, #B9D9EB 68%, #7CB9E8 98%);
 
     background-size: 400% auto;
     animation: gradientAnimation 5s ease-in-out infinite;

@@ -33,11 +33,11 @@ const Hero = () => {
             Sign Up{" "}
           </Link>
          </Button>
-          <button className="text-blue-600 mx-5 hover:border-blue-600 hover:border-solid hover:border-2 px-4 py-2 rounded-3xl hover:ease-in-out" > Learn more</button>
+          <button className="text-blue-600 mx-5 hover:border-blue-600 hover:border-solid hover:border-2 px-4 py-2 rounded-3xl hover:ease-in-out" > <Link to='/Demo'>Learn More</Link></button>
          </div>
         </div>
         <div className="flex">
-          <div className="absolute left-80">
+          <div className="absolute left-80 hidden md:flex">
             <img src={BgProp} alt="bg item" className=" w-5/6 z-10 md:z-0" />
           </div>
           <div className=" mx-2 bg-white flex flex-col justify-center items-center border-2 border-solid rounded-xl p-6 border-blue-400 relative z-20 md:z-10 ">

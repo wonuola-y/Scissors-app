@@ -7,7 +7,7 @@ import Info from "./components/Info";
 import Pricing from "./components/Pricing";
 import Faq from "./components/Faq";
 import Nav from "./components/Nav";
-
+import { Demo } from "./components/Demo";
 import { NotFound } from "./components/NotFound";
 import HashLoader from "react-spinners/HashLoader";
 import "./App.css";
@@ -49,7 +49,7 @@ export const App: React.FunctionComponent<IAppProps> = (props) => {
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="*" element={<NotFound />}></Route>
-            {/* <Route path="/Nav" element={<Nav />}></Route> */}
+            <Route path="/Demo" element={<Demo />}></Route>
             <Route path="/MyUrls" element={<Form />} />
             <Route path="/FormHolder" element={<FormHolder />} />
             <Route path="/Features" element={<Info />} />

@@ -10,7 +10,7 @@ export const FormHolder = (props: Props) => {
 
 <div className="flex justify-around items-center py-8 w-full relative  text-sm pt-10 md:pt-[8rem]   gradient-animation " >
       
-      <div className="flex md:max-w-lg w-5/6 flex-col p-8  bg-white relative ">
+      <div className="flex md:max-w-lg w-5/6 flex-col p-8  bg-white relative rounded-xl">
         <Form />
        <LinkResult inputValue={inputValue} />
         <div>
