@@ -11,7 +11,7 @@ const Hero = () => {
         <h1
           className="font-semibold
           md:text-5xl text-xl 
-          w-8/12 md:w-full 
+          w-5/6 md:w-full 
           text-center 
           md:max-w-5xl 
           md:flex flex-col 
