@@ -34,10 +34,10 @@ const Nav = () => {
       nav
       
      w-full
-     flex justify-between md:justify-between
+     flex justify-between items-center md:justify-between
    absolute
      z-30 md:fixed 
-     py-4 
+     py-4 px-3
     md:bg-blue-100 
      md:rounded-lg bg-clip-padding
      md:backdrop-filter

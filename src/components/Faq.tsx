@@ -18,7 +18,7 @@ const FAQ: fq[] = [
   },
   {
     id: 3,
-    question: "Are the shortened links permanent ? Will they expire ?",
+    question: "Are the shortened links permanent? Will they expire?",
     answer: " No, they don't expire.",
   },
   {
@@ -54,7 +54,7 @@ const toggle = (index: number) => {
 {FAQ.map((i, id)=>(
   <div key={id} className="flex flex-col w-2/3 ">
   <div className="flex justify-between py-5 "  onClick={()=> toggle( id )} >
-  <h1 className=" cursor-pointer ">
+  <h1 className=" cursor-pointer max-w-[85%] font-semibold ">
     {i.question}
         </h1>
         <b className={` cursor-pointer ${active === id ? active : ''}`}>+</b>
@@ -65,7 +65,7 @@ const toggle = (index: number) => {
            backdrop-filter
            backdrop-blur-lg
            rounded-lg
-           bg-opacity-10 ">{i.answer}</p> }
+           bg-opacity-10">{i.answer}</p> }
         </div>
         <hr />
   </div>

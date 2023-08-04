@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend:{
       fontFamily:{
-       'play': ['open sans']
+       'play': ['"Open Sans"']
       },
       clamp: {
         '1/2': 'clamp(50%, 100%, 100vw)',

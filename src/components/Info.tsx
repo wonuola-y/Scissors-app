@@ -125,14 +125,6 @@ const Info = () => {
           ))}
         </div>
       </div>
-      <div className="my-10 flex justify-center ">
-        <Link
-          to="/"
-          className="py-3 px-3 text-white bg-blue-600 rounded-3xl m-4 mb-0"
-        >
-          Back to top
-        </Link>
-      </div>
     </div>
     </div>
   );
