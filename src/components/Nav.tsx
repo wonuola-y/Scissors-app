@@ -103,7 +103,7 @@ const Nav = () => {
           >
             <Link
               to="/sign"
-              className="rounded-3xl px-4 py-3 md:px-3 text-white"
+              className="rounded-3xl px-4 py-3 md:px-3"
             >
               Sign Up
             </Link>

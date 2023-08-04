@@ -7,7 +7,7 @@ type ButtonProps = {
 
   return (
   
-    <button   className="py-2 my-4 rounded-3xl text-white bg-blue-600 w-2/5 cursor-pointer hover:bg-blue-700" >
+    <button className="py-2 my-4 rounded-3xl text-white bg-blue-600 w-2/5 cursor-pointer hover:bg-white hover:text-blue-600 hover:border-2 hover:border-blue-600 hover:transition-all hover:ease-in-out" >
 {props.children}
     </button>
   )

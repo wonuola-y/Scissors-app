@@ -88,13 +88,14 @@ const Info = () => {
         <div
           className="w-full
          md:w-5/12 md:text-left
+         md:px-6
          md:flex md:flex-col
           "
         >
           <h2 className="font-bold text-4xl">
             Why choose <span className="text-blue-600">Scissors</span>
           </h2>
-          <p className=" leading-7 md:max-w-md text-sm">
+          <p className=" leading-7  md:max-w-md text-sm">
             Scissors is the hub of everything that has to do with your link
             management. We shorten your URLs, allow you creating custom ones for
             your personal, business, event usage. Our swift QR code creation,

@@ -33,7 +33,7 @@ const Hero = () => {
             Sign Up{" "}
           </Link>
          </Button>
-          <button className="text-blue-600 mx-5"> Learn more</button>
+          <button className="text-blue-600 mx-5 hover:border-blue-600 hover:border-solid hover:border-2 px-4 py-2 rounded-3xl hover:ease-in-out" > Learn more</button>
          </div>
         </div>
         <div className="flex">
