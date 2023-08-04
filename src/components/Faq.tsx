@@ -52,9 +52,9 @@ const toggle = (index: number) => {
 
 <div className="flex flex-col justify-center items-center ">
 {FAQ.map((i, id)=>(
-  <div key={id} className="flex flex-col w-2/3 ">
+  <div key={id} className="flex flex-col w-5/6">
   <div className="flex justify-between py-5 "  onClick={()=> toggle( id )} >
-  <h1 className=" cursor-pointer max-w-[85%] font-semibold ">
+  <h1 className=" cursor-pointer max-w-[85%] md:font-semibold  ">
     {i.question}
         </h1>
         <b className={` cursor-pointer ${active === id ? active : ''}`}>+</b>
